@@ -5,5 +5,6 @@ public record OrderResponse(
 
         Long orderId,
         int totalPrice
+
 ) {
 }

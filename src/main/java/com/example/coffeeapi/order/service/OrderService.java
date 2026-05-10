@@ -41,6 +41,13 @@ public class OrderService {
         List<Menu> menus =
                 menuRepository.findAllById(request.menuIds());
 
+        // 메뉴 존재 여부 검증
+        if (menus.size() != request.menuIds().size()) {
+            throw new IllegalArgumentException(
+                    "존재하지 않는 메뉴가 포함되어 있습니다."
+            );
+        }
+
         // 총 주문 금액 계산
         int totalPrice = menus.stream()
                 .mapToInt(Menu::getPrice)

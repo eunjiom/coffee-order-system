@@ -1,4 +1,7 @@
 package com.example.coffeeapi.common.exception;
 
-public class ErrorResponse {
+// 공통 에러 응답 DTO
+public record ErrorResponse(
+        String message
+) {
 }
