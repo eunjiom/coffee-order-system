@@ -4,7 +4,7 @@ import com.example.coffeeapi.point.dto.PointChargeRequest;
 import com.example.coffeeapi.point.dto.PointResponse;
 import com.example.coffeeapi.user.domain.User;
 import com.example.coffeeapi.user.repository.UserRepository;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
